@@ -1,44 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:game_test/constants/app_color.dart';
 import 'package:game_test/constants/app_text.dart';
+import 'package:game_test/model/suroo_model.dart';
 
 class Continents {
-  const Continents({
+  Continents({
     required this.text,
     required this.color,
     required this.icon,
+    this.suroo,
   });
   final String text;
   final String icon;
   final Color color;
+  List<Suroo>? suroo;
 }
 
-const europe = Continents(
+final europe = Continents(
   color: AppColor.evropaColor,
   icon: 'europe',
   text: AppTexst.europeText,
 );
-const africa = Continents(
+final africa = Continents(
   color: AppColor.africsClolr,
   icon: 'africa',
   text: AppTexst.africaText,
 );
-const asia = Continents(
+final asia = Continents(
   color: AppColor.asiaColor,
   icon: 'asia',
   text: AppTexst.asiaText,
+  suroo: asiaQuestions,
 );
-const australia = Continents(
+final australia = Continents(
   color: AppColor.australiaColor,
   icon: 'australia',
   text: AppTexst.australiaText,
 );
-const northAmerica = Continents(
+final northAmerica = Continents(
   color: AppColor.nortAColor,
   icon: 'north_america',
   text: AppTexst.norhtAText,
 );
-const southAmerica = Continents(
+final southAmerica = Continents(
   color: AppColor.southAColor,
   icon: 'south_america',
   text: AppTexst.southAText,

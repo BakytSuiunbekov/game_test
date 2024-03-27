@@ -22,11 +22,11 @@ class CustomCard extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 30,
-            color: Color(0xffeeeeeee),
+            color: const Color(0xffEEEEEE),
             child: Center(
               child: Text(
                 text,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
                 ),
@@ -36,6 +36,7 @@ class CustomCard extends StatelessWidget {
           Expanded(
             child: SvgPicture.asset(
               'assets/icons/$icon.svg',
+              // width: 60,
               fit: BoxFit.fill,
               color: color,
             ),

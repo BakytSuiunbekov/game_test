@@ -13,7 +13,7 @@ class TestPage extends StatefulWidget {
 }
 
 class _TestPageState extends State<TestPage> {
-  int index = 1;
+  int index = 0;
   int tuuraJoop = 0;
   int katajoop = 0;
   @override
@@ -23,7 +23,7 @@ class _TestPageState extends State<TestPage> {
       appBar: AppBar(
         backgroundColor: const Color(0xfff0f0f0),
         title: AppBarWidget(
-          suroolordunSany: index,
+          suroolordunSany: index + 1,
           tuuraJoop: tuuraJoop,
           kataJoop: katajoop,
         ),
@@ -69,8 +69,8 @@ class _TestPageState extends State<TestPage> {
                       return AlertDialog(
                         title: const Text('Тестин жыйынтыгы'),
                         content: Text(
-                          'Туура жообтор: $tuuraJoop'
-                          'Ката жооптоп: $katajoop',
+                          'Туура жообтор: $tuuraJoop\n'
+                          'Ката жооптоп: $katajoop\n',
                         ),
                         actions: <Widget>[
                           TextButton(
